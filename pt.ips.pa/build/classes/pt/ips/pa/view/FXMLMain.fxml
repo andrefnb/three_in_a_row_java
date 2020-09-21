@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.ControllerMainWindow">
+   <children>
+      <VBox fx:id="janelaPrincipal" alignment="TOP_RIGHT" prefHeight="450.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="itemNovoJogo" mnemonicParsing="false" onAction="#iniciarJogo" text="Novo Jogo">
+                           <accelerator>
+                              <KeyCodeCombination alt="ANY" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#loadPaneMusic" text="Música">
+                           <accelerator>
+                              <KeyCodeCombination alt="ANY" code="F2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadHistorico" text="Histórico">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#loadRankings" text="Ranking">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <Menu mnemonicParsing="false" text="Estatísticas por Jogo">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#estatisticaNormalBase" text="Normal-Base">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#estatisticaNormalCorrida" text="Normal-Corrida">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#estatisticaRapidoBase" text="Rapido-Base">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT3" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#estatisticaRapidoCorrida" text="Rapido-Corrida">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                          </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="itemUndo" disable="true" mnemonicParsing="false" onAction="#undo" text="Undo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="loggerOptions" mnemonicParsing="false" onAction="#loadLoggerOptions" text="Opções">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="itemReturn" mnemonicParsing="false" onAction="#voltarAtras" text="Return">
+                           <accelerator>
+                              <KeyCodeCombination alt="ANY" code="BACK_SPACE" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="ESCAPE" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuView" disable="true" mnemonicParsing="false" text="View">
+                    <items>
+                        <CheckMenuItem fx:id="viewNome" mnemonicParsing="false" text="Nome">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></CheckMenuItem>
+                        <CheckMenuItem fx:id="viewPontuacao" mnemonicParsing="false" selected="true" text="Pontuação">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></CheckMenuItem>
+                        <CheckMenuItem fx:id="viewTempo" mnemonicParsing="false" selected="true" text="Tempo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></CheckMenuItem>
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                      <MenuItem mnemonicParsing="false" onAction="#loadHelpWindow" text="Help">
+                           <accelerator>
+                              <KeyCodeCombination alt="ANY" code="F11" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#loadCreditos" text="About">
+                           <accelerator>
+                              <KeyCodeCombination alt="ANY" code="F12" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                     </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <StackPane fx:id="zonaJogo" prefHeight="450.0" prefWidth="650.0">
+               <children>
+                  <Button fx:id="buttonIniciarJogo" defaultButton="true" ellipsisString="" mnemonicParsing="false" onAction="#iniciarJogo" text="Iniciar Jogo" underline="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="sceneStatistics" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: GHOSTWHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLEstatisticasWindowController">
+   <children>
+      <Label layoutX="14.0" layoutY="411.0" text="Press the slice to see the Value">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Tempo Médio de Jogo (Top10)">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="421.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <PieChart fx:id="pieChartTMJ" legendSide="LEFT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pont. Máx. (Top10)">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="421.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <PieChart fx:id="pieChartPM" legendSide="LEFT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Nº Jogos (Top10)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="421.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <PieChart fx:id="pieChartNumJogos" legendSide="LEFT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLGameWindowController">
+   <children>
+      <BorderPane fx:id="zonaParaTabuleiro" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" spacing="100.0">
+               <children>
+                  <Label fx:id="labelNome" opacity="0.0" text="Nome">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelPontuacao" alignment="CENTER" text="Pontuacao">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelTempo" alignment="CENTER_RIGHT" text="Hora">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <padding>
+            <Insets bottom="15.0" top="15.0" />
+         </padding>
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelJogadasPossiveis" opacity="0.0" text="Jogadas Possíveis: ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelNumJogadasPossiveis" opacity="0.0" text="20">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

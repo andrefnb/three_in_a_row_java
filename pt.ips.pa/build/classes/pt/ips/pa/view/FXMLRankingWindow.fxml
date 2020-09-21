@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="sceneRanking" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: GHOSTWHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLRankingWindowController">
+   <children>
+      <BorderPane prefHeight="450.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Accordion BorderPane.alignment="CENTER">
+              <panes>
+                  <TitledPane animated="false" contentDisplay="CENTER" text="Base Normal">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane prefHeight="349.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView fx:id="ListBaseNormal" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER" />
+                                 </children></StackPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                <TitledPane animated="false" text="Base Rápido">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane prefHeight="349.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView fx:id="ListBaseRapido" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER" />
+                                 </children></StackPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Corrida Normal">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane prefHeight="349.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView fx:id="ListCorridaNormal" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER" />
+                                 </children></StackPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Corrida Rápido">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane prefHeight="349.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ListView fx:id="ListCorridaRapido" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER" />
+                                 </children></StackPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

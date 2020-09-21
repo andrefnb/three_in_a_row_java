@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections ?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLOptionsWindowController">
+    <children>
+        <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                    <children>
+                        <Label text="Tema:" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="temaEscolhido" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Halloween" />
+                                    <String fx:value="Smileys" />
+                                    <String fx:value="War" />
+                                    <String fx:value="Gravity Falls" />
+                                    <String fx:value="Steven Universe" />
+                                    <String fx:value="Pokémon" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <String fx:value="Halloween" />
+                            </value>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                    <children>
+                        <Label text="Número de Linhas:" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="numLinhas" prefWidth="150.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <Integer fx:value="4" />
+                                    <Integer fx:value="5" />
+                                    <Integer fx:value="6" />
+                                </FXCollections>
+                            </items>
+                            <value>
+                                <Integer fx:value="6" />
+                            </value>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                    <children>
+                        <Label text="Variante de Jogo:" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="radioButtonNormal" mnemonicParsing="false" selected="true" text="Normal" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="groupJogo" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Rápida" textFill="WHITE" toggleGroup="$groupJogo">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                    <children>
+                        <Label text="Tipo de Pontuação:" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="radioButtonBase" mnemonicParsing="false" selected="true" text="Base" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="groupPontuacao" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Corrida" textFill="WHITE" toggleGroup="$groupPontuacao">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <Button fx:id="comecarJogo" mnemonicParsing="false" onAction="#comecarJogo" text="Começar Jogo" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

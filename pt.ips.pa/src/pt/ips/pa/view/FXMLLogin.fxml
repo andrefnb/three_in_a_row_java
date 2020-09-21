@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLLoginController">
+   <children>
+      <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="130.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="nomeJogador" promptText="Nome do Jogador" />
+                  <Button fx:id="buttonCriarJogador" mnemonicParsing="false" onAction="#createJogador" text="Criar Jogador" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <ListView fx:id="listViewJogadores">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin></ListView>
+            <Button fx:id="buttonContinuar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#continuar" text="Continuar">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

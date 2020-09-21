@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLLoggerOptionsController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox fx:id="opcaoInicio" mnemonicParsing="false" selected="true" text="Início de Jogo" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcaoJogadas" mnemonicParsing="false" selected="true" text="Jogadas" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="opcaoFim" mnemonicParsing="false" selected="true" text="Fim de Jogo" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <Label text="Opções" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <bottom>
+            <Button fx:id="buttonConfirmar" mnemonicParsing="false" onAction="#closeLoggerOptions" text="Confirmar Alterações" BorderPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
